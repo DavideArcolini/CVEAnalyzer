@@ -1,7 +1,7 @@
 # CVEAnalyzer
 
 |Authors|Contact|
-|:--:|:--|:
+|:--:|:--:|
 |Davide Arcolini | davide.arcolini@studenti.polito.it|
 |Manuel Colotti| manuel.colotti@gmail.com |
 
