@@ -11,8 +11,8 @@ def main(argv = None) -> None:
     
     # initialization
     try: 
-        logger = Logger()
         analyzer = Analyzer(PATH_CONFIG, PATH_TARGET)
+        logger = Logger(analyzer.get_output_file())
     except FileNotFoundError as E: 
         exception(E)
     
@@ -21,7 +21,7 @@ def main(argv = None) -> None:
     result = analyzer.parse_data(data)
     
     # logging CVEs info to markdown
-    # log_CVE_info(result)
+    logger.log_CVE_info(result)
     
     
     return 

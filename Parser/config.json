@@ -9,7 +9,8 @@
     ],
     "state": "PUBLIC",
     "descriptions": [
-        "Spring",
-        "Spring Boot"
-    ]
+        "Spring"
+    ],
+
+    "output": "RESULT.md"
 }

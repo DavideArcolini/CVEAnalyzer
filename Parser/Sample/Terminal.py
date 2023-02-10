@@ -1,6 +1,6 @@
 from colorama import Fore
 
-class Banner: 
+class Terminal: 
     '''
     Visual banner for the script
     '''
@@ -26,15 +26,6 @@ class Banner:
     def print_banner(self) -> None:
         print(self.header)
         
-    def print_start_collection(self) -> None:
-        print(Fore.GREEN + '[+]' + Fore.RESET + ' Collecting CVEs from the original repository.')
-    
-    def print_start_analysis(self) -> None:
-        print(Fore.GREEN + '[+]' + Fore.RESET + ' Analyzing data retrieved.')
-        print(Fore.GREEN + '[+]' + Fore.RESET + ' This could take a while...')
-        
-    def print_number_of_CVE(self, count: int) -> None:
-        print(Fore.GREEN + '[+]' + Fore.RESET + ' Collected ' + str(count) + ' CVEs')
-        
-    def print_number_of_results(self, count: int) -> None:
-        print(Fore.GREEN + '[!]' + Fore.RESET + ' Found ' + Fore.CYAN + str(count) + Fore.RESET + ' CVEs compliant the configuration provided.\n')
+    def log(self, message) -> None:
+        print(Fore.GREEN + '[+] ' + Fore.RESET + message)
+        return

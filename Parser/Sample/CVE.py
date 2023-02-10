@@ -32,10 +32,10 @@ class CVE:
         return [item['value'] for item in self.cve['description']['description_data'] if item["lang"] == self.lang]
     
     def get_affected_product_names(self) -> list:
-        return []
+        return [item['product']['product_data'][0]['product_name'] for item in self.cve['affects']['vendor']['vendor_data']]
     
     def get_affected_product_versions(self) -> list:
-        return []
+        return [item['product']['product_data'][0]['version']['version_data'][0]['version_value'] for item in self.cve['affects']['vendor']['vendor_data']]
     
     def get_references(self) -> list: 
         return [item['url'] for item in self.cve['references']['reference_data']]

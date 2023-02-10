@@ -3,7 +3,7 @@ from re import match
 from json import load
 from alive_progress import alive_bar
 from Sample.CVE import CVE
-from Sample.Banner import Banner
+from Sample.Terminal import Terminal
 
 
 class Analyzer: 
@@ -13,14 +13,16 @@ class Analyzer:
     
     def __init__(self, path_config: str, path_target: str) -> None:
         self.target = path_target
-        self.banner = Banner()
-        self.banner.print_banner()
+        self.terminal = Terminal()
+        self.terminal.print_banner()
         try:
             with open(path_config) as file:
                 self.filters = load(file)
         except FileNotFoundError as E:
             raise E
-            
+        
+    def get_output_file(self) -> str:
+        return self.filters['output']
     
     def check_filters(self, cve: CVE) -> bool:
         '''
@@ -40,7 +42,7 @@ class Analyzer:
         '''
         
         # banner
-        self.banner.print_start_collection()
+        self.terminal.log('Collecting CVEs from the original repository.')
         
         # retrieving list of years
         years = []
@@ -57,7 +59,7 @@ class Analyzer:
                 data.extend([f'{self.target}/{year}/{id}/{file}' for file in listdir(f'{self.target}/{year}/{id}')])
 
         # banner
-        self.banner.print_number_of_CVE(len(data))
+        self.terminal.log('Collected ' + str(len(data)) + ' CVEs')
         return data
     
     def parse_data(self, data: list) -> dict:
@@ -69,7 +71,8 @@ class Analyzer:
         '''
         
         # banner
-        self.banner.print_start_analysis()
+        self.terminal.log('Analyzing data retrieved.')
+        self.terminal.log('This could take a while...')
         
         result = {}
         
@@ -98,5 +101,5 @@ class Analyzer:
         
         # banner
         print()
-        self.banner.print_number_of_results(len(result))
+        self.terminal.log(f'Found {len(result)} CVEs compliant the configuration provided.\n')
         return result
