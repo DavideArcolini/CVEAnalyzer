@@ -14,3 +14,4 @@
 |CVE-2018-1273|https://github.com/wearearima/poc-cve-2018-1273|<li>Proof of Concept</br>|
 |CVE-2018-1273|https://github.com/jas502n/cve-2018-1273|<li>Proof of Concept</br>|
 |CVE-2018-1273|https://github.com/spring-projects/spring-data-redis|<li>v2.0.0 should be vulnerable to the CVE</br>|
+|CVE-2022-22980|https://github.com/kaiso/relmongo|<li>Version: 2.2.6.RELEASE</br><li>@Query annotation present</br>|
