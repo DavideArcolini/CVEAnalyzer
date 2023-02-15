@@ -13,3 +13,4 @@
 |CVE-2022-22980|https://github.com/FAIRDataTeam/FAIRDataPoint|<li>spring-data-mongodb version is vulnerable</br><li>do not presents @Query or @Aggregation</br><li>Just for reference</br>|
 |CVE-2018-1273|https://github.com/wearearima/poc-cve-2018-1273|<li>Proof of Concept</br>|
 |CVE-2018-1273|https://github.com/jas502n/cve-2018-1273|<li>Proof of Concept</br>|
+|CVE-2018-1273|https://github.com/spring-projects/spring-data-redis|<li>v2.0.0 should be vulnerable to the CVE</br>|
