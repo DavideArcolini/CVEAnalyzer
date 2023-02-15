@@ -12,3 +12,5 @@
 |CVE-2022-46166|https://github.com/SolarEdgeTech/pyctuator|<li>Version: 2.2.2</br><li>Check if Notifier Enabled (container)</br><li>Check if write access on env vars enabled</br>|
 |CVE-2022-22980|https://github.com/johanhaleby/occurrent|<li>spring-data-mongodb version is vulnerable</br><li>do not presents @Query or @Aggregation</br><li>Just for reference</br>|
 |CVE-2022-22980|https://github.com/FAIRDataTeam/FAIRDataPoint|<li>spring-data-mongodb version is vulnerable</br><li>do not presents @Query or @Aggregation</br><li>Just for reference</br>|
+|CVE-2018-1273|https://github.com/wearearima/poc-cve-2018-1273|<li>Proof of Concept</br>|
+|CVE-2018-1273|https://github.com/jas502n/cve-2018-1273|<li>Proof of Concept</br>|
