@@ -15,3 +15,4 @@
 |CVE-2018-1273|https://github.com/jas502n/cve-2018-1273|<li>Proof of Concept</br>|
 |CVE-2018-1273|https://github.com/spring-projects/spring-data-redis|<li>v2.0.0 should be vulnerable to the CVE</br>|
 |CVE-2022-22980|https://github.com/kaiso/relmongo|<li>Version: 2.2.6.RELEASE</br><li>@Query annotation present</br>|
+|CVE-2022-22947|https://github.com/vinicius-martinez/FsMicroServicesWithSpringBoot|<li>Version 2020.0.0</br><li>Gateway actuator endpoint enabled</br>|
